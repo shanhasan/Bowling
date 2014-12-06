@@ -1,0 +1,18 @@
+
+describe("Pin", function(){
+	
+	var pin;
+
+	beforeEach(function(){
+		pin = new Pin();
+	});
+
+	it('is not knocked down at the beginning of the game', function(){
+		expect(pin.isNotKnockedDown()).toBe(false)
+	})
+
+	it('can be knocked down', function(){
+		expect(pin.isKnockedDown()).toBe(true)
+	})
+
+});
