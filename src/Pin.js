@@ -2,7 +2,7 @@ function Pin() {
 	this.knockedDown = false;
 };
 
-Pin.prototype.isNotKnockedDown = function(){
-	this.knockedDown= true;
+Pin.prototype.isKnockedDown = function(){
+	this.knockedDown = true;
 };
 
