@@ -1,10 +1,8 @@
-function Pin() { };
-
+function Pin() { 
+	this.knockedDown = false;
+};
 
 Pin.prototype.isNotKnockedDown = function(){
-	return false;
+	this.knockedDown= true;
 };
 
-Pin.prototype.isKnockedDown = function(){
-	return true;
-};

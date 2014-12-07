@@ -1,25 +1,19 @@
 describe("Frame", function() {
 
-	var frame, pins
+	var frame, pin, totalPins
 
 	beforeEach(function(){
 		frame = new Frame
-		totalPins = 10
+		pin = new Pin
 	});
 
 	it('is populated with 10 pins', function(){
-		frame.fillFrame()
-		expect(frame.activeFrame.length).toEqual(totalPins);
+		frame.fillFrame(pin)
+		expect(frame.activeFrame.length).toEqual(10);
 	});
 
 	it('cannot have more than 10 pins', function(){
 		expect(totalPins).toBeLessThan(11);
 	});
-
-	// it('can have less than 10 pins after a roll', function(){
-				
-	// });
-
-
 
 	});
