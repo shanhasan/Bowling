@@ -4,7 +4,7 @@ describe("Player", function() {
 
 	beforeEach(function(){
 		player = new Player('Giorgia', 0);
-		roll = 0
+		roll = 2
 		score = 0
 	});
 
@@ -20,16 +20,12 @@ describe("Player", function() {
 		expect(player.score).toEqual(0);
 	})
 	
-	it('can change the score', function(){
-		expect(player.totalPoints()).toEqual(0)
-	})
-
-	
-
-	// it('can roll a max of 2 times', function(){
-	// 	roll = 2
-	// 	expect(roll).toBeLessThan(3);
-	// })	
+	it('can roll a max of 2 times', function(){
+		expect(roll).toBe(2);
+	})	
 
 	
 });
+
+
+// toBeLessThan(3)

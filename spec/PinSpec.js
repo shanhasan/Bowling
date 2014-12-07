@@ -8,11 +8,11 @@ describe("Pin", function(){
 	});
 
 	it('is not knocked down at the beginning of the game', function(){
-		expect(pin.isNotKnockedDown()).toBe(false)
+		expect(pin.knockedDown).toBe(false)
 	})
 
-	it('can be knocked down', function(){
-		expect(pin.isKnockedDown()).toBe(true)
-	})
+	// it('can be knocked down', function(){
+	// 	expect(pin.isKnockedDown()).toBe(true)
+	// })
 
 });

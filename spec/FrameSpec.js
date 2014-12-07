@@ -13,7 +13,7 @@ describe("Frame", function() {
 	});
 
 	it('cannot have more than 10 pins', function(){
-		expect(totalPins).toBeLessThan(11);
+		expect(frame.activeFrame.length).toBeLessThan(11);
 	});
 
 	});
