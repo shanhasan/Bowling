@@ -1,6 +1,6 @@
 describe('Game', function(){
 
-	var game, player, frameFull, pin, round;
+	var game, player, frameFull, pin, round, totalRolls;
 
 	beforeEach(function(){
 		game = new Game
@@ -15,8 +15,10 @@ describe('Game', function(){
 		expect(game.player).not.toEqual(this.player);
 	})
 
-	it('cannot have more than a player', function(){
-
+	it("doesn't consider more than one player", function(){
+		game.addPlayer('bubu')
+		game.addPlayer('bubu3')
+		expect(game.player).toEqual('bubu')
 	})
 
 	it('after filled, it will have 10 frames', function(){
@@ -27,10 +29,26 @@ describe('Game', function(){
 
 	it('knows in which frame the player is playing', function(){
 		game.fillGame(frameFull)
-		expect(game.activeFrame()).toEqual(1)
+		expect(game.activeFrame()).toEqual(round)
 	})
 
-	it('ends a frame immediately if the player strikes', function(){
+	it('changes the frame generally after two rolls', function(){
+
+	})
+
+	it('knows when a player strikes',function(){
+
+	})
+
+	it('knows when a player does a spare',function(){
+
+	})
+
+	it('ends a frame immediately if the player rolls a strike', function(){
+
+	})
+
+	it("updates the player's score after each roll", function(){
 
 	})
 

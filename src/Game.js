@@ -5,17 +5,17 @@ function Game(){
 };
 
 Game.prototype.addPlayer = function(player) {
-	this.player = player
+	if (typeof this.player == 'undefined'){
+		this.player = player}
 };
 
 Game.prototype.fillGame = function(frameFull){
 	for(var i=0; i<10; i++){
-		this.frames.push(frameFull)
-	}
+		this.frames.push(frameFull)}
 };
 
 Game.prototype.activeFrame = function(){
 	var firstRound = 1
-	return this.frames.indexOf(this.currentFrame)+ firstRound
+	return this.frames.indexOf(this.currentFrame) + firstRound
 };
 
