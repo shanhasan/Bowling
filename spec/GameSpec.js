@@ -1,12 +1,13 @@
 describe('Game', function(){
 
-	var game, player, frameFull, pin;
+	var game, player, frameFull, pin, round;
 
 	beforeEach(function(){
 		game = new Game
 		player = new Player
 		frame = new Frame
 		pin = new Pin
+		round = 1
 	});
 
 	it('must have a player', function(){
@@ -24,6 +25,15 @@ describe('Game', function(){
 		expect(game.frames.length).toBe(10)	
 	})
 
+	it('knows in which frame the player is playing', function(){
+		game.fillGame(frameFull)
+		expect(game.activeFrame()).toEqual(1)
+	})
+
+	it('ends a frame immediately if the player strikes', function(){
+
+	})
+
 
 	
 
@@ -33,6 +43,11 @@ describe('Game', function(){
 });
 
 // Strikes:
+
+// In every frame the player can roll one or two times;
+// The actual number of rolls depends on strikes and spares(see below).
+// The score of a frame is the number of knocked down pins plus bonuses for strikes and spares.
+// After every frame the 10 pins are reset.
 
 // The player has a strike if he knocks down all 10 pins
 // with the first roll in a frame. 

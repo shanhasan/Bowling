@@ -1,7 +1,7 @@
 function Game(){
 	this.player
 	this.frames = []
-	// this.gameIsReady = []
+	this.currentFrame
 };
 
 Game.prototype.addPlayer = function(player) {
@@ -14,6 +14,8 @@ Game.prototype.fillGame = function(frameFull){
 	}
 };
 
-// Game.prototype.readyToPlay = function(frame, pin) {
-// // 	for(var i=0; i<10; i++){ this.gameIsReady.push(addSingleFrame(frame, pin)}
-// };
+Game.prototype.activeFrame = function(){
+	var firstRound = 1
+	return this.frames.indexOf(this.currentFrame)+ firstRound
+};
+
