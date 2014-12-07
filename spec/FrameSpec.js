@@ -1,6 +1,6 @@
 describe("Frame", function() {
 
-	var frame, pin, totalPins
+	var frame, pin
 
 	beforeEach(function(){
 		frame = new Frame
@@ -8,12 +8,12 @@ describe("Frame", function() {
 	});
 
 	it('is populated with 10 pins', function(){
-		frame.fillFrame(pin)
-		expect(frame.activeFrame.length).toEqual(10);
+		frame.fill(pin)
+		expect(frame.content.length).toEqual(10);
 	});
 
 	it('cannot have more than 10 pins', function(){
-		expect(frame.activeFrame.length).toBeLessThan(11);
+		expect(frame.content.length).toBeLessThan(11);
 	});
 
 	});

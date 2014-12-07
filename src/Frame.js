@@ -1,9 +1,9 @@
 function Frame() {
-	this.activeFrame = []
+	this.content = []
 };
 
-Frame.prototype.fillFrame = function(pin){
-	for(var i=0; i<10; i++){this.activeFrame.push(pin)}
+Frame.prototype.fill = function(pin){
+	for(var i=0; i<10; i++){this.content.push(pin)}
 };
 
 

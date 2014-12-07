@@ -1,6 +1,6 @@
 describe('Game', function(){
 
-	var game, player, frame, pin;
+	var game, player, frameFull, pin;
 
 	beforeEach(function(){
 		game = new Game
@@ -18,18 +18,12 @@ describe('Game', function(){
 
 	})
 
-	it('has a frame composed by 10 pins', function(){
-		expect(game.currentFrame.length).toEqual(0)
-		game.addSingleFrame(frame)
-		expect(game.currentFrame.length).toEqual(10)
-		// console.log(game.currentFrame.length)
-		// console.log(game.currentFrame)
+	it('after filled, it will have 10 frames', function(){
+		frame.fill(pin)
+		game.fillGame(frameFull)
+		expect(game.frames.length).toBe(10)	
 	})
 
-	it('has ten frames of 10 pins each', function(){
-		
-
-	})
 
 	
 
